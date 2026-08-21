@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B2E3E">
+<title>Rêva Santé</title>
+<meta name="description" content="Prestataire de santé à domicile à Marseille : organisation du retour à domicile et continuité des traitements.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap">
+<style>
+:root{
+  --bg:#F4F8F9; --surface:#FFFFFF; --surface-2:#EDF4F5;
+  --ink:#0D2430; --ink-2:#4F6E7C; --ink-3:#7C949E;
+  --line:#D9E6EA; --line-strong:#C2D6DC;
+  --deep:#0B2E3E; --deep-2:#123F55;
+  --eau:#2FA491; --eau-strong:#136B5F; --eau-soft:#E2F1EE;
+  --amber:#8A6A16; --amber-soft:#FBF2DC; --amber-line:#E3CE93;
+  --on-deep:#EAF3F4; --on-deep-2:#9FBECA; --on-deep-line:rgba(255,255,255,.14);
+  --shadow:0 1px 2px rgba(11,46,62,.05), 0 12px 28px -18px rgba(11,46,62,.35);
+  --r:3px;
+  --maxw:1140px;
+  --f-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Source Sans 3","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#06191F; --surface:#0B2733; --surface-2:#0F303D;
+    --ink:#E6F0F1; --ink-2:#A3BCC4; --ink-3:#7B98A2;
+    --line:#193F4E; --line-strong:#245567;
+    --deep:#04141B; --deep-2:#0C3243;
+    --eau:#4FC4AE; --eau-strong:#77D6C0; --eau-soft:rgba(79,196,174,.12);
+    --amber:#E2C176; --amber-soft:rgba(226,193,118,.10); --amber-line:rgba(226,193,118,.35);
+    --on-deep:#E6F0F1; --on-deep-2:#93B2BE; --on-deep-line:rgba(255,255,255,.12);
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 30px -20px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#06191F; --surface:#0B2733; --surface-2:#0F303D;
+  --ink:#E6F0F1; --ink-2:#A3BCC4; --ink-3:#7B98A2;
+  --line:#193F4E; --line-strong:#245567;
+  --deep:#04141B; --deep-2:#0C3243;
+  --eau:#4FC4AE; --eau-strong:#77D6C0; --eau-soft:rgba(79,196,174,.12);
+  --amber:#E2C176; --amber-soft:rgba(226,193,118,.10); --amber-line:rgba(226,193,118,.35);
+  --on-deep:#E6F0F1; --on-deep-2:#93B2BE; --on-deep-line:rgba(255,255,255,.12);
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 30px -20px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;line-height:1.08;letter-spacing:-.02em;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:var(--eau-strong);text-decoration-thickness:1px;text-underline-offset:3px}
+img,svg{max-width:100%}
+:focus-visible{outline:2px solid var(--eau);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--eau-strong);font-family:var(--f-body)}
+.lede{font-size:19px;color:var(--ink-2);max-width:62ch}
+section{padding:88px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;flex-direction:column;gap:14px;max-width:64ch;margin-bottom:44px}
+h2{font-size:clamp(28px,3.6vw,44px)}
+h3{font-size:20px;letter-spacing:-.01em}
+
+.tofill{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-body);font-size:12.5px;font-weight:600;color:var(--amber);background:var(--amber-soft);border:1px dashed var(--amber-line);border-radius:2px;padding:2px 8px;letter-spacing:.01em;vertical-align:baseline}
+.tofill::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;flex:none}
+
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-body);font-size:15.5px;font-weight:600;padding:13px 22px;border-radius:var(--r);border:1px solid transparent;cursor:pointer;text-decoration:none;transition:transform .15s ease,background .15s ease,border-color .15s ease,color .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--eau-strong);color:#fff;border-color:var(--eau-strong)}
+.btn-primary:hover{background:var(--deep);border-color:var(--deep)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+.btn-ghost:hover{border-color:var(--eau);color:var(--eau-strong)}
+.on-deep .btn-ghost{color:var(--on-deep);border-color:var(--on-deep-line)}
+.on-deep .btn-ghost:hover{border-color:var(--eau);color:var(--eau)}
+.on-deep .btn-primary{background:var(--eau);color:#04202B;border-color:var(--eau)}
+.on-deep .btn-primary:hover{background:#fff;border-color:#fff;color:var(--deep)}
+
+header.site{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;height:74px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);margin-right:auto}
+.brand-mark{width:30px;height:30px;flex:none}
+.brand-name{font-family:var(--f-display);font-weight:800;font-size:20px;letter-spacing:-.025em}
+.brand-name span{color:var(--eau-strong)}
+.nav-links{display:flex;gap:20px;align-items:center;white-space:nowrap}
+.nav-links a{color:var(--ink-2);text-decoration:none;font-size:15px;font-weight:600}
+header.site .btn{font-size:14.5px;padding:11px 18px;white-space:nowrap}
+.nav-links a:hover{color:var(--eau-strong)}
+.burger{display:none;background:none;border:1px solid var(--line-strong);border-radius:var(--r);padding:9px 11px;cursor:pointer;color:var(--ink)}
+
+.hero{border-top:none;background:var(--deep);color:var(--on-deep);padding:0;position:relative;overflow:hidden}
+.hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:92px 0 0}
+.hero h1{font-size:clamp(38px,5.4vw,66px);font-weight:800;color:#fff;margin:18px 0 0}
+.hero .lede{color:var(--on-deep-2);margin-top:22px;font-size:20px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero-note{margin-top:20px;font-size:14px;color:var(--on-deep-2)}
+.hero-art{position:relative;min-height:340px;display:flex;align-items:center;justify-content:center}
+.hero-art svg{width:100%;height:auto}
+.trace{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s cubic-bezier(.45,.05,.3,1) .3s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.pulse{opacity:0;animation:pop .6s ease forwards}
+@keyframes pop{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.trace{animation:none;stroke-dashoffset:0}.pulse{animation:none;opacity:1}}
+.hero-strip{margin-top:78px;border-top:1px solid var(--on-deep-line);display:grid;grid-template-columns:repeat(4,1fr)}
+.hero-strip div{padding:22px 26px 26px;border-right:1px solid var(--on-deep-line)}
+.hero-strip div:last-child{border-right:none}
+.hero-strip strong{display:block;font-family:var(--f-display);font-size:16px;font-weight:700;color:#fff;margin-bottom:5px}
+.hero-strip p{font-size:14px;color:var(--on-deep-2);line-height:1.45}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);overflow:hidden}
+.step{padding:30px 28px 34px;border-right:1px solid var(--line);position:relative;display:flex;flex-direction:column;gap:12px}
+.step:last-child{border-right:none}
+.step-rail{display:flex;align-items:center;gap:10px}
+.step-num{font-family:var(--f-body);font-variant-numeric:tabular-nums;font-size:12.5px;font-weight:700;letter-spacing:.1em;color:var(--eau-strong)}
+.step-line{height:1px;background:var(--line-strong);flex:1}
+.step-dot{width:9px;height:9px;border-radius:50%;background:var(--eau);flex:none}
+.step h3{font-size:18.5px}
+.step p{font-size:15.5px;color:var(--ink-2)}
+.step-when{margin-top:auto;padding-top:14px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px 30px;display:flex;flex-direction:column;gap:12px;transition:border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.card:hover{border-color:var(--eau);transform:translateY(-2px);box-shadow:var(--shadow)}
+.card-ico{width:34px;height:34px;color:var(--eau-strong)}
+.card p{font-size:15.5px;color:var(--ink-2)}
+.card ul{margin:4px 0 0;padding-left:18px;font-size:14.5px;color:var(--ink-2);display:flex;flex-direction:column;gap:4px}
+
+.band{background:var(--deep-2);color:var(--on-deep);border-top:none}
+.band h2{color:#fff}
+.band .lede{color:var(--on-deep-2)}
+.band .eyebrow{color:var(--eau)}
+.band-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+.pledges{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--on-deep-line)}
+.pledge{display:grid;grid-template-columns:26px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--on-deep-line)}
+.pledge svg{width:22px;height:22px;color:var(--eau);margin-top:3px}
+.pledge strong{display:block;font-family:var(--f-display);font-size:17px;font-weight:700;color:#fff;margin-bottom:4px}
+.pledge p{font-size:15px;color:var(--on-deep-2)}
+.callout{background:rgba(255,255,255,.05);border:1px solid var(--on-deep-line);border-radius:var(--r);padding:30px 28px;display:flex;flex-direction:column;gap:16px;position:sticky;top:96px}
+.callout h3{color:#fff;font-size:22px}
+.callout p{font-size:15.5px;color:var(--on-deep-2)}
+.callout .row{display:flex;flex-direction:column;gap:10px;padding-top:6px;border-top:1px solid var(--on-deep-line)}
+.callout .row a{color:#fff;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:10px}
+.callout .row a:hover{color:var(--eau)}
+.callout .row svg{width:17px;height:17px;color:var(--eau);flex:none}
+
+.two-col{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.faq{border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;font-family:var(--f-display);font-weight:600;font-size:17.5px;position:relative;color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:27px;width:9px;height:9px;border-right:2px solid var(--eau-strong);border-bottom:2px solid var(--eau-strong);transform:rotate(45deg);transition:transform .2s ease}
+details[open] summary::after{transform:rotate(-135deg)}
+details p{padding:0 40px 22px 0;font-size:15.5px;color:var(--ink-2)}
+.aside-note{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--eau);border-radius:var(--r);padding:24px;font-size:15.5px;color:var(--ink-2);display:flex;flex-direction:column;gap:10px}
+.aside-note strong{color:var(--ink);font-family:var(--f-display);font-size:17px}
+
+.zones{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.chip{font-size:14.5px;font-weight:600;color:var(--ink-2);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 16px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+label{font-size:13.5px;font-weight:700;letter-spacing:.03em;color:var(--ink-2)}
+input,select,textarea{font-family:var(--f-body);font-size:16px;color:var(--ink);background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--r);padding:12px 14px;width:100%}
+textarea{min-height:130px;resize:vertical}
+input::placeholder,textarea::placeholder{color:var(--ink-3)}
+.consent{grid-column:1/-1;display:flex;gap:11px;align-items:flex-start;font-size:14px;color:var(--ink-2)}
+.consent input{width:17px;height:17px;flex:none;margin-top:3px;accent-color:var(--eau-strong)}
+.form-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.form-foot small{font-size:13px;color:var(--ink-3)}
+.sent{grid-column:1/-1;background:var(--eau-soft);border:1px solid var(--eau);border-radius:var(--r);padding:18px 20px;font-size:15.5px;color:var(--ink)}
+.contact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start}
+.coord{display:flex;flex-direction:column;gap:20px}
+.coord-item{display:grid;grid-template-columns:22px 1fr;gap:14px;font-size:15.5px;color:var(--ink-2)}
+.coord-item svg{width:19px;height:19px;color:var(--eau-strong);margin-top:4px}
+.coord-item strong{display:block;color:var(--ink);font-family:var(--f-display);font-size:16px;margin-bottom:2px}
+.urgence{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;font-size:14.5px;color:var(--ink-2)}
+.urgence strong{color:var(--ink)}
+
+footer.site{background:var(--deep);color:var(--on-deep-2);padding:64px 0 34px;font-size:14.5px}
+footer.site .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:38px;border-bottom:1px solid var(--on-deep-line)}
+footer.site h4{font-family:var(--f-display);font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:16px;font-weight:700}
+footer.site a{color:var(--on-deep-2);text-decoration:none;display:block;padding:5px 0}
+footer.site a:hover{color:var(--eau)}
+footer.site .legal{padding-top:26px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;font-size:13px;color:var(--on-deep-2)}
+.footer-brand{color:#fff;font-family:var(--f-display);font-size:22px;font-weight:800;letter-spacing:-.025em;margin-bottom:12px}
+.footer-brand span{color:var(--eau)}
+
+@media (max-width:1180px){
+  .hero-inner{grid-template-columns:1fr;gap:36px;padding-top:64px}
+  .hero-art{min-height:240px;order:-1}
+  .hero-strip{grid-template-columns:1fr 1fr;margin-top:52px}
+  .hero-strip div:nth-child(2){border-right:none}
+  .hero-strip div:nth-child(-n+2){border-bottom:1px solid var(--on-deep-line)}
+  .steps{grid-template-columns:1fr 1fr}
+  .step:nth-child(2){border-right:none}
+  .step:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .grid-3{grid-template-columns:1fr 1fr}
+  .band-grid,.two-col,.split,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .callout{position:static}
+  .nav-links{display:none}
+  .nav-links.open{display:flex;position:absolute;left:0;right:0;top:74px;flex-direction:column;gap:0;background:var(--surface);border-bottom:1px solid var(--line);padding:8px 28px 18px}
+  .nav-links.open a{padding:12px 0;border-bottom:1px solid var(--line)}
+  .burger{display:inline-flex}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  section{padding:60px 0}
+  .hero-inner{padding-top:48px}
+  .hero .lede{font-size:17.5px}
+  .hero-strip{grid-template-columns:1fr}
+  .hero-strip div{border-right:none;border-bottom:1px solid var(--on-deep-line)}
+  .steps{grid-template-columns:1fr}
+  .step{border-right:none;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:none}
+  .grid-3{grid-template-columns:1fr}
+  form{grid-template-columns:1fr}
+  footer.site .cols{grid-template-columns:1fr;gap:30px}
+  .btn{width:100%;justify-content:center}
+}
+
+.on-deep .eyebrow{color:#7DD9C4}
+.on-deep .tofill{color:#EBCB84;background:rgba(235,203,132,.12);border-color:rgba(235,203,132,.42)}
+.on-deep .aside-note{background:rgba(255,255,255,.05);border-color:var(--on-deep-line);color:var(--on-deep-2)}
+.on-deep .aside-note strong{color:#fff}
+.on-deep .chip{background:rgba(255,255,255,.06);border-color:var(--on-deep-line);color:var(--on-deep-2)}
+
+section{scroll-margin-top:86px}
+.medecin{background:var(--surface-2)}
+.med-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.login-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;display:flex;flex-direction:column;gap:16px;box-shadow:var(--shadow)}
+.login-card h3{font-size:21px}
+.login-card .field{gap:6px}
+.login-card small{font-size:13px;color:var(--ink-3)}
+.login-head{display:flex;align-items:center;gap:11px}
+.login-head svg{width:22px;height:22px;color:var(--eau-strong);flex:none}
+.med-uses{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.med-use{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px;display:flex;flex-direction:column;gap:9px}
+.med-use h3{font-size:17.5px}
+.med-use p{font-size:15px;color:var(--ink-2)}
+.med-use svg{width:26px;height:26px;color:var(--eau-strong)}
+.med-use.wide{grid-column:1/-1;flex-direction:row;align-items:center;gap:18px;justify-content:space-between}
+.med-use.wide div{display:flex;flex-direction:column;gap:6px}
+.med-use.wide .btn{white-space:nowrap;flex:none}
+.status{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--eau-strong)}
+@media (max-width:1080px){.med-grid{grid-template-columns:1fr;gap:32px}}
+@media (max-width:640px){.med-uses{grid-template-columns:1fr}.med-use.wide{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Rêva Santé, accueil">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.4" opacity=".22"/>
+        <path d="M6.5 21.5c0-7 4.4-11.5 9.5-11.5s9.5 4.5 9.5 11.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="25.5" cy="21.5" r="3.2" fill="#2FA491"/>
+      </svg>
+      <span class="brand-name">Rêva<span>&nbsp;Santé</span></span>
+    </a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#parcours">Parcours</a>
+      <a href="#prises-en-charge">Prises en charge</a>
+      <a href="#patients">Patients</a>
+      <a href="#recrutement">Nous rejoindre</a>
+    </nav>
+    <a class="btn btn-ghost" href="#espace-medecin">Espace médecin</a>
+    <a class="btn btn-primary" href="#contact">Demander une prise en charge</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero on-deep">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">Prestataire de santé à domicile &middot; Marseille et Bouches-du-Rhône</p>
+        <h1>Rentrer chez soi sans rien perdre de la qualité des soins.</h1>
+        <p class="lede">Rêva Santé organise le retour à domicile des patients et la continuité de leurs traitements&nbsp;: matériel installé et testé, protocole respecté, infirmier coordinateur joignable, prescripteur informé.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact">Adresser un patient</a>
+          <a class="btn btn-ghost" href="#patients">Je suis patient ou aidant</a>
+        </div>
+        <p class="hero-note">Prestations prises en charge par l'Assurance Maladie selon les conditions de la LPPR, sur prescription médicale.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 520 400" fill="none">
+          <g opacity=".5" stroke="#9FBECA" stroke-width="1">
+            <path d="M0 330h520M0 250h520M0 170h520" opacity=".18"/>
+          </g>
+          <g stroke="#9FBECA" stroke-width="1.6" opacity=".8">
+            <path d="M34 200v-84h30V98h64v18h30v84" stroke-linejoin="round"/>
+            <rect x="42" y="130" width="14" height="12" rx="1"/>
+            <rect x="42" y="156" width="14" height="12" rx="1"/>
+            <rect x="64" y="130" width="14" height="12" rx="1"/>
+            <rect x="64" y="156" width="14" height="12" rx="1"/>
+            <rect x="114" y="130" width="14" height="12" rx="1"/>
+            <rect x="114" y="156" width="14" height="12" rx="1"/>
+            <rect x="136" y="130" width="14" height="12" rx="1"/>
+            <rect x="136" y="156" width="14" height="12" rx="1"/>
+            <path d="M86 200v-24h20v24" stroke-linejoin="round"/>
+            <path d="M24 200h144" opacity=".55"/>
+          </g>
+          <g stroke="#2FA491" stroke-width="3" stroke-linecap="round">
+            <path d="M88 128v26M104 128v26M88 141h16"/>
+          </g>
+          <text x="34" y="86" fill="#9FBECA" font-family="Source Sans 3, sans-serif" font-size="13" letter-spacing="1.6">SERVICE HOSPITALIER</text>
+          <g stroke="#9FBECA" stroke-width="1.6" opacity=".75">
+            <path d="M356 292v-52l52-34 52 34v52z" stroke-linejoin="round"/>
+            <path d="M394 292v-34h28v34" stroke="#2FA491" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <text x="356" y="322" fill="#9FBECA" font-family="Source Sans 3, sans-serif" font-size="13" letter-spacing="1.6">DOMICILE</text>
+          <path class="trace" pathLength="1" d="M96 208c0 60 34 74 106 74s110-16 152-52 40-52 54-58" stroke="#2FA491" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <g class="pulse" style="animation-delay:1.5s">
+            <circle cx="202" cy="282" r="5.5" fill="#04202B" stroke="#2FA491" stroke-width="2"/>
+            <circle cx="316" cy="262" r="5.5" fill="#04202B" stroke="#2FA491" stroke-width="2"/>
+            <circle cx="386" cy="216" r="5.5" fill="#04202B" stroke="#2FA491" stroke-width="2"/>
+          </g>
+          <g class="pulse" style="animation-delay:2.1s">
+            <circle cx="408" cy="172" r="9" fill="#2FA491"/>
+            <circle cx="408" cy="172" r="17" stroke="#2FA491" stroke-width="1.4" opacity=".45"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="hero-strip">
+      <div><strong>Un coordinateur référent</strong><p>Un infirmier coordinateur suit le dossier de bout en bout, du service jusqu'au domicile.</p></div>
+      <div><strong>Installation programmée</strong><p>Matériel livré, installé et testé avant le retour du patient, aidants formés aux gestes utiles.</p></div>
+      <div><strong>Astreinte <span class="tofill">horaires à préciser</span></strong><p>Une ligne dédiée pour les imprévus, en dehors des heures d'ouverture.</p></div>
+      <div><strong>Le prescripteur informé</strong><p>Compte rendu d'installation et suivi transmis au service et au médecin traitant.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="parcours">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Le parcours</p>
+      <h2>Quatre temps, du service hospitalier au domicile.</h2>
+      <p class="lede">Un retour à domicile réussi se prépare avant la sortie. Voici ce que nous prenons en charge, dans l'ordre.</p>
+    </div>
+    <div class="steps">
+      <article class="step">
+        <div class="step-rail"><span class="step-dot"></span><span class="step-num">01</span><span class="step-line"></span></div>
+        <h3>La prescription nous parvient</h3>
+        <p>Le service hospitalier, le médecin traitant ou le spécialiste nous adresse l'ordonnance. Nous vérifions la faisabilité au domicile et confirmons la prise en charge au prescripteur.</p>
+        <p class="step-when">Avant la sortie</p>
+      </article>
+      <article class="step">
+        <div class="step-rail"><span class="step-dot"></span><span class="step-num">02</span><span class="step-line"></span></div>
+        <h3>Le domicile est préparé</h3>
+        <p>Visite d'installation, vérification de l'environnement, livraison et mise en service du matériel. Le patient et ses aidants sont formés aux gestes essentiels et aux consignes de sécurité.</p>
+        <p class="step-when">Jour de l'installation</p>
+      </article>
+      <article class="step">
+        <div class="step-rail"><span class="step-dot"></span><span class="step-num">03</span><span class="step-line"></span></div>
+        <h3>Le traitement démarre</h3>
+        <p>Le patient rentre chez lui. Le protocole se poursuit à l'identique, en lien avec l'infirmier libéral, le pharmacien et le médecin traitant du secteur.</p>
+        <p class="step-when">Retour à domicile</p>
+      </article>
+      <article class="step">
+        <div class="step-rail"><span class="step-dot"></span><span class="step-num">04</span><span class="step-line"></span></div>
+        <h3>Le suivi s'installe</h3>
+        <p>Passages programmés, réapprovisionnement en consommables, maintenance du matériel, comptes rendus au prescripteur et astreinte en cas d'imprévu.</p>
+        <p class="step-when">Toute la durée du traitement</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="prises-en-charge">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Prises en charge</p>
+      <h2>Les traitements que nous accompagnons à domicile.</h2>
+      <p class="lede">Chaque prise en charge est mise en place sur prescription médicale, avec le matériel et les consommables adaptés au protocole. <span class="tofill">Périmètre exact à valider avant mise en ligne</span></p>
+    </div>
+    <div class="grid-3">
+      <article class="card">
+        <svg class="card-ico" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M11 4h10M16 4v8M9 12h14l-2 14a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2L9 12z" stroke-linejoin="round"/><path d="M11 20h10" stroke-linecap="round"/></svg>
+        <h3>Oncologie et chimiothérapie à domicile</h3>
+        <p>Poursuite des traitements anticancéreux prescrits en dehors de l'hôpital, avec le matériel de perfusion, la gestion des déchets et la surveillance associée.</p>
+        <ul><li>Pompes et diffuseurs portables</li><li>Chambres implantables et cathéters</li><li>Circuit des déchets de soins</li></ul>
+      </article>
+      <article class="card">
+        <svg class="card-ico" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13 3h6v7l4 6v11a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V16l4-6V3z" stroke-linejoin="round"/><path d="M9 20h14" stroke-linecap="round"/></svg>
+        <h3>Perfusion et antibiothérapie</h3>
+        <p>Antibiothérapie intraveineuse, antalgiques, hydratation, traitements de longue durée&nbsp;: le dispositif est installé et suivi au domicile.</p>
+        <ul><li>Pieds à perfusion et pompes</li><li>Consommables réapprovisionnés</li><li>Coordination avec l'infirmier libéral</li></ul>
+      </article>
+      <article class="card">
+        <svg class="card-ico" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 6h16v20a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3V6z" stroke-linejoin="round"/><path d="M8 13h16M16 18v6" stroke-linecap="round"/></svg>
+        <h3>Nutrition entérale et parentérale</h3>
+        <p>Mise en place et suivi de la nutrition artificielle, formation des aidants à l'utilisation quotidienne de la pompe et au protocole d'hygiène.</p>
+        <ul><li>Pompes de nutrition</li><li>Poches et tubulures</li><li>Suivi diététique <span class="tofill">à confirmer</span></li></ul>
+      </article>
+      <article class="card">
+        <svg class="card-ico" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 28c5 0 9-3.6 9-9 0-6-9-15-9-15S7 13 7 19c0 5.4 4 9 9 9z" stroke-linejoin="round"/><path d="M12 19a4 4 0 0 0 4 4" stroke-linecap="round"/></svg>
+        <h3>Assistance respiratoire</h3>
+        <p>Oxygénothérapie, ventilation et traitement de l'apnée du sommeil&nbsp;: appareillage installé au domicile, réglages conformes à la prescription, maintenance assurée.</p>
+        <ul><li>Concentrateurs et bouteilles</li><li>Appareils de PPC et ventilation</li><li>Maintenance et télésuivi <span class="tofill">à confirmer</span></li></ul>
+      </article>
+      <article class="card">
+        <svg class="card-ico" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M16 10v6l4 3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Insulinothérapie et diabète</h3>
+        <p>Accompagnement des patients sous pompe à insuline&nbsp;: mise en route, éducation à l'autonomie, suivi du matériel et des consommables.</p>
+        <ul><li>Pompes et capteurs</li><li>Éducation thérapeutique</li><li>Lien avec le diabétologue</li></ul>
+      </article>
+      <article class="card">
+        <svg class="card-ico" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 24h24M7 24v-8h18v8M10 16v-4h12v4" stroke-linejoin="round"/><path d="M7 24v3M25 24v3" stroke-linecap="round"/></svg>
+        <h3>Maintien à domicile et matériel médical</h3>
+        <p>Lit médicalisé, matelas anti-escarres, fauteuil roulant, aide au transfert&nbsp;: le logement est équipé pour que le maintien à domicile reste possible et sûr.</p>
+        <ul><li>Livraison et installation</li><li>Adaptation du logement</li><li>Reprise du matériel en fin de traitement</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="prescripteurs" class="band on-deep">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Prescripteurs</p>
+      <h2>Ce que vous pouvez attendre de nous.</h2>
+      <p class="lede">Services hospitaliers, médecins traitants, spécialistes&nbsp;: vous confiez un patient, vous gardez la main sur son suivi.</p>
+    </div>
+    <div class="band-grid">
+      <div class="pledges">
+        <div class="pledge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
+          <div><strong>Une réponse rapide sur la faisabilité</strong><p>Nous confirmons la prise en charge et la date d'installation dès réception de la prescription, pour que la sortie ne soit pas retardée. <span class="tofill">délai d'engagement à fixer</span></p></div>
+        </div>
+        <div class="pledge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 4h8a2 2 0 0 1 2 2v14l-6-3-6 3V6a2 2 0 0 1 2-2z" stroke-linejoin="round"/></svg>
+          <div><strong>Le protocole appliqué à la lettre</strong><p>Aucune adaptation du traitement de notre initiative. Ce qui est prescrit est ce qui est mis en place au domicile.</p></div>
+        </div>
+        <div class="pledge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16v12H4z" stroke-linejoin="round"/><path d="M4 8l8 5 8-5" stroke-linecap="round"/></svg>
+          <div><strong>Un compte rendu après chaque étape</strong><p>Installation, incident, modification du besoin&nbsp;: vous recevez l'information sans avoir à la demander.</p></div>
+        </div>
+        <div class="pledge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.4"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5M16.5 14.5c2.6 0 4.5 1.6 4.5 4.5" stroke-linecap="round"/></svg>
+          <div><strong>Un interlocuteur, pas un standard</strong><p>Un infirmier coordinateur référent connaît le dossier, le service et les libéraux qui interviennent autour du patient.</p></div>
+        </div>
+        <div class="pledge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l8 4v6c0 5-3.4 7.6-8 8-4.6-.4-8-3-8-8V7l8-4z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong>Matériel tracé et maintenu</strong><p>Livraison, mise en service, contrôles et reprise en fin de traitement sont documentés et traçables.</p></div>
+        </div>
+      </div>
+      <aside class="callout">
+        <h3>Adresser un patient</h3>
+        <p>Transmettez-nous la prescription et les coordonnées du patient. Nous rappelons le service pour caler la date d'installation.</p>
+        <div class="row">
+          <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" stroke-linejoin="round"/></svg><span class="tofill">Ligne prescripteurs à renseigner</span></a>
+          <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16v12H4z" stroke-linejoin="round"/><path d="M4 8l8 5 8-5" stroke-linecap="round"/></svg><span class="tofill">Email dédié à renseigner</span></a>
+          <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z" stroke-linejoin="round"/><path d="M9 13h6M9 17h6" stroke-linecap="round"/></svg>Fiche de demande de prise en charge (PDF)</a>
+        </div>
+        <a class="btn btn-primary" href="#contact">Ouvrir le formulaire</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="espace-medecin" class="medecin">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Espace médecin</p>
+      <h2>Un accès dédié aux médecins et aux services.</h2>
+      <p class="lede">Adresser un patient, retrouver un compte rendu, relancer une prestation&nbsp;: sans passer par le standard, à l'heure qui vous arrange.</p>
+    </div>
+    <div class="med-grid">
+      <div class="login-card">
+        <div class="login-head">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke-linecap="round"/></svg>
+          <h3>Connexion praticien</h3>
+        </div>
+        <div class="field">
+          <label for="med-mail">Email professionnel</label>
+          <input id="med-mail" type="email" placeholder="dr.nom@etablissement.fr" autocomplete="username">
+        </div>
+        <div class="field">
+          <label for="med-pass">Mot de passe</label>
+          <input id="med-pass" type="password" placeholder="••••••••" autocomplete="current-password">
+        </div>
+        <button class="btn btn-primary" type="button" id="med-login">Accéder à mes dossiers</button>
+        <small>Première connexion&nbsp;? Demandez vos identifiants à votre infirmier coordinateur référent. Accès réservé aux professionnels de santé, RPPS vérifié.</small>
+        <small><span class="tofill">portail sécurisé à déployer &mdash; statut et prestataire à valider</span></small>
+      </div>
+      <div class="med-uses">
+        <article class="med-use">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M18 4H9a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V11l-7-7z" stroke-linejoin="round"/><path d="M12 17h8M12 21h5" stroke-linecap="round"/></svg>
+          <h3>Adresser un patient en ligne</h3>
+          <p>Ordonnance déposée, coordonnées du patient, date de sortie prévue&nbsp;: la demande part directement au coordinateur du secteur.</p>
+          <span class="status">Disponible 24 h/24</span>
+        </article>
+        <article class="med-use">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 26V8a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v18" stroke-linejoin="round"/><path d="M9 20l5-6 4 4 3-4 3 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Suivre vos patients</h3>
+          <p>Comptes rendus d'installation, visites réalisées, incidents signalés, dates de fin de prescription&nbsp;: l'historique de chaque dossier que vous nous avez confié.</p>
+          <span class="status">Accès sur identifiants</span>
+        </article>
+        <article class="med-use">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M16 11v10M11 16h10" stroke-linecap="round"/></svg>
+          <h3>Demander une intervention</h3>
+          <p>Modification du traitement, matériel supplémentaire, reprise anticipée&nbsp;: une demande, une prise en charge sous <span class="tofill">délai à fixer</span></p>
+          <span class="status">Traitée par le coordinateur référent</span>
+        </article>
+        <article class="med-use">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 5h20v22H6z" stroke-linejoin="round"/><path d="M11 12h10M11 17h10M11 22h6" stroke-linecap="round"/></svg>
+          <h3>Documents et protocoles</h3>
+          <p>Fiches de demande de prise en charge, ordonnances types, notices du matériel, coordonnées des astreintes&nbsp;: tout est téléchargeable.</p>
+          <span class="status">Bibliothèque à jour</span>
+        </article>
+        <article class="med-use wide">
+          <div>
+            <h3>Pas encore d'accès&nbsp;?</h3>
+            <p>Nous ouvrons un accès nominatif par praticien ou par service, avec les dossiers qui vous concernent uniquement.</p>
+          </div>
+          <a class="btn btn-primary" href="#contact">Demander un accès</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="patients">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Patients &amp; aidants</p>
+      <h2>Ce qui va se passer chez vous.</h2>
+      <p class="lede">Le retour à domicile soulève des questions très concrètes. Voici les réponses que nous donnons le plus souvent.</p>
+    </div>
+    <div class="two-col">
+      <div class="aside-note">
+        <strong>Vous n'avez rien à organiser vous-même.</strong>
+        <p>C'est l'hôpital ou votre médecin qui nous transmet la prescription. Nous vous appelons ensuite pour convenir du jour d'installation et vérifier que le logement est adapté.</p>
+        <p>Le jour venu, un intervenant se déplace, installe le matériel, le teste devant vous et vous explique son fonctionnement. Rien ne démarre tant que vous n'êtes pas à l'aise.</p>
+        <p>Vous gardez vos professionnels de santé habituels&nbsp;: votre infirmier libéral, votre pharmacie, votre médecin traitant.</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>Est-ce que cela me coûte quelque chose&nbsp;?</summary>
+          <p>Les prestations réalisées sur prescription médicale sont prises en charge par l'Assurance Maladie dans les conditions prévues par la LPPR, la part complémentaire relevant de votre mutuelle. Nous vous indiquons avant l'installation ce qui est couvert dans votre situation et ce qui ne l'est pas.</p>
+        </details>
+        <details>
+          <summary>Combien de temps avant que le matériel soit installé&nbsp;?</summary>
+          <p>L'installation est programmée avec le service hospitalier pour être prête au moment de la sortie. <span class="tofill">délai type à préciser</span></p>
+        </details>
+        <details>
+          <summary>Qui vient à mon domicile&nbsp;?</summary>
+          <p>Un intervenant de Rêva Santé, identifié et formé au matériel concerné. Il installe, teste et vous forme, puis repasse selon le rythme prévu pour la maintenance et le réapprovisionnement.</p>
+        </details>
+        <details>
+          <summary>Et si un problème survient la nuit ou le week-end&nbsp;?</summary>
+          <p>Une ligne d'astreinte permet de joindre un interlocuteur en dehors des heures d'ouverture, pour les situations liées au matériel ou à la prestation. <span class="tofill">horaires et numéro à préciser</span> En cas d'urgence médicale, appelez le 15.</p>
+        </details>
+        <details>
+          <summary>Mon infirmière libérale continue-t-elle de venir&nbsp;?</summary>
+          <p>Oui. Nous n'intervenons pas à la place des professionnels de santé qui vous suivent&nbsp;: nous fournissons le dispositif, le matériel et la coordination autour du traitement.</p>
+        </details>
+        <details>
+          <summary>Que devient le matériel à la fin du traitement&nbsp;?</summary>
+          <p>Nous venons le récupérer sur simple appel, après l'arrêt de la prescription. Rien ne reste chez vous, rien ne vous est facturé pour la reprise.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="secteur">
+  <div class="wrap">
+    <div class="split">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Zone d'intervention</p>
+        <h2>Marseille et les Bouches-du-Rhône.</h2>
+        <p class="lede">Nos équipes interviennent au domicile des patients sur le secteur suivant. En dehors de cette zone, appelez-nous&nbsp;: nous vous orientons vers un confrère.</p>
+        <div class="zones">
+          <span class="chip">Marseille, 16 arrondissements</span>
+          <span class="chip">Aubagne</span>
+          <span class="chip">Aix-en-Provence</span>
+          <span class="chip">La Ciotat</span>
+          <span class="chip">Vitrolles</span>
+          <span class="tofill">liste des communes à valider</span>
+        </div>
+      </div>
+      <div class="aside-note">
+        <strong>Rêva Santé, en bref</strong>
+        <p>Société créée en 2023, basée dans le 12<sup>e</sup> arrondissement de Marseille, dédiée au retour à domicile et à la continuité des soins.</p>
+        <p>Une équipe d'infirmiers coordinateurs et d'intervenants terrain, en lien permanent avec les services hospitaliers du secteur et les professionnels de santé libéraux.</p>
+        <p><span class="tofill">effectif, agréments et certifications à compléter</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recrutement" class="band on-deep">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">Nous rejoindre</p>
+        <h2 style="margin-top:14px">Infirmier coordinateur&nbsp;: le métier au cœur de la maison.</h2>
+        <p class="lede" style="margin-top:18px">Vous êtes IDE et vous voulez un rôle qui dépasse le soin technique&nbsp;: organiser un retour à domicile, dialoguer avec les services, sécuriser un patient et sa famille. C'est exactement le poste.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact">Envoyer une candidature</a>
+          <a class="btn btn-ghost" href="#contact">Voir les postes ouverts</a>
+        </div>
+      </div>
+      <div class="pledges">
+        <div class="pledge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4v16M4 12h16" stroke-linecap="round"/></svg><div><strong>Un périmètre large</strong><p>Coordination du parcours, relation avec les services, formation des patients et des aidants.</p></div></div>
+        <div class="pledge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg><div><strong>Une structure à taille humaine</strong><p>Des décisions rapides, pas de couches hiérarchiques entre le terrain et la direction.</p></div></div>
+        <div class="pledge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12" stroke-linejoin="round"/><path d="M10 20v-6h4v6" stroke-linejoin="round"/></svg><div><strong>Conditions</strong><p><span class="tofill">statut, rémunération, véhicule et avantages à compléter</span></p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Contact</p>
+      <h2>Écrivez-nous, nous rappelons.</h2>
+      <p class="lede">Une demande de prise en charge, une question sur un dossier en cours, une candidature&nbsp;: un seul formulaire, une réponse par un interlocuteur qui connaît le sujet.</p>
+    </div>
+    <div class="contact-grid">
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="qualite">Vous êtes</label>
+          <select id="qualite" name="qualite">
+            <option>Patient ou aidant</option>
+            <option>Service hospitalier</option>
+            <option>Médecin ou professionnel de santé libéral</option>
+            <option>Candidat à un poste</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="nom">Nom et prénom</label>
+          <input id="nom" name="nom" type="text" autocomplete="name" placeholder="Marie Dupont" required>
+        </div>
+        <div class="field">
+          <label for="tel">Téléphone</label>
+          <input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="06 00 00 00 00" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="marie.dupont@exemple.fr">
+        </div>
+        <div class="field full">
+          <label for="message">Votre demande</label>
+          <textarea id="message" name="message" placeholder="Décrivez la situation : type de traitement, date de sortie prévue, commune du domicile." required></textarea>
+        </div>
+        <div class="consent">
+          <input id="consent" name="consent" type="checkbox" required>
+          <label for="consent" style="font-weight:400">J'accepte que les informations transmises soient utilisées pour traiter ma demande. Elles ne sont conservées que le temps nécessaire et ne sont jamais cédées à des tiers.</label>
+        </div>
+        <div class="form-foot">
+          <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+          <small>Ne transmettez pas de données médicales détaillées par ce formulaire.</small>
+        </div>
+      </form>
+      <div class="coord">
+        <div class="coord-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" stroke-linejoin="round"/></svg>
+          <div><strong>Téléphone</strong><span class="tofill">numéro principal à renseigner</span></div>
+        </div>
+        <div class="coord-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16v12H4z" stroke-linejoin="round"/><path d="M4 8l8 5 8-5" stroke-linecap="round"/></svg>
+          <div><strong>Email</strong><span class="tofill">adresse de contact à renseigner</span></div>
+        </div>
+        <div class="coord-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <div><strong>Adresse</strong>Impasse Barthélemy, 5 avenue Fernandel<br>13012 Marseille</div>
+        </div>
+        <div class="coord-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
+          <div><strong>Horaires</strong><span class="tofill">jours et heures d'ouverture à renseigner</span></div>
+        </div>
+        <div class="urgence"><strong>Urgence médicale&nbsp;:</strong> composez le 15 (SAMU) ou le 112. Ce site ne remplace pas un avis médical.</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="footer-brand">Rêva<span>&nbsp;Santé</span></div>
+        <p style="max-width:38ch">Prestataire de santé à domicile à Marseille. Retour à domicile organisé, continuité des traitements assurée.</p>
+      </div>
+      <div>
+        <h4>Le cabinet</h4>
+        <a href="#parcours">Le parcours</a>
+        <a href="#prises-en-charge">Prises en charge</a>
+        <a href="#secteur">Zone d'intervention</a>
+        <a href="#recrutement">Nous rejoindre</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="#contact">Demander une prise en charge</a>
+        <a href="#prescripteurs">Espace prescripteurs</a>
+        <a href="#espace-medecin">Espace médecin (connexion)</a>
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>REVA SANTE — SASU — SIREN 952 726 149 — Impasse Barthélemy, 5 avenue Fernandel, 13012 Marseille</span>
+      <span>© 2026 Rêva Santé — Tous droits réservés</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'), n=document.getElementById('navlinks');
+  b.addEventListener('click',function(){
+    var open=n.classList.toggle('open');
+    b.setAttribute('aria-expanded',open?'true':'false');
+  });
+  n.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}
+  });
+  var ml=document.getElementById('med-login');
+  if(ml){ml.addEventListener('click',function(){
+    var c=ml.parentNode, m=c.querySelector('.mock-msg');
+    if(m)return;
+    var d=document.createElement('div');
+    d.className='sent mock-msg';d.setAttribute('role','status');
+    d.textContent="Maquette : le portail praticien sera branché à la mise en ligne (accès nominatif, vérification RPPS).";
+    c.insertBefore(d, ml.nextSibling);
+  });}
+  var f=document.getElementById('contact-form');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var required=f.querySelectorAll('[required]'), ok=true;
+    required.forEach(function(el){
+      var bad=(el.type==='checkbox')?!el.checked:!el.value.trim();
+      el.style.borderColor=bad?'#C0552F':'';
+      if(bad)ok=false;
+    });
+    if(!ok)return;
+    var d=document.createElement('div');
+    d.className='sent';
+    d.setAttribute('role','status');
+    d.textContent="Demande prête à être envoyée. Maquette : l'envoi sera branché à la mise en ligne (email ou formulaire relié au CRM).";
+    f.innerHTML='';
+    f.appendChild(d);
+  });
+})();
+</script>
+</body>
+</html>
