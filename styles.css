@@ -70,7 +70,7 @@ header.site .btn{font-size:14.5px;padding:11px 18px;white-space:nowrap}
 .hero h1{font-size:clamp(38px,5.4vw,66px);font-weight:800;color:var(--ink);margin:0}
 .hero .lede{color:var(--ink-2);margin-top:22px;font-size:20px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
-.hero-note{margin-top:20px;font-size:14px;color:var(--ink-3)}
+.hero-note{margin-top:20px;font-size:14px;color:var(--ink-2)}
 .hero-art{position:relative;min-height:340px;display:flex;align-items:center;justify-content:center}
 .hero-art svg{width:100%;height:auto}
 .trace{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s cubic-bezier(.45,.05,.3,1) .3s forwards}
@@ -148,7 +148,7 @@ input::placeholder,textarea::placeholder{color:var(--ink-3)}
 .consent{grid-column:1/-1;display:flex;gap:11px;align-items:flex-start;font-size:14px;color:var(--ink-2)}
 .consent input{width:17px;height:17px;flex:none;margin-top:3px;accent-color:var(--eau-strong)}
 .form-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
-.form-foot small{font-size:13px;color:var(--ink-3)}
+.form-foot small{font-size:13px;color:var(--ink-2)}
 .sent{grid-column:1/-1;background:var(--eau-soft);border:1px solid var(--eau);border-radius:var(--r);padding:18px 20px;font-size:15.5px;color:var(--ink)}
 .contact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start}
 .coord{display:flex;flex-direction:column;gap:20px}
@@ -161,7 +161,7 @@ input::placeholder,textarea::placeholder{color:var(--ink-3)}
 /* ---- footer ---- */
 footer.site{background:var(--deep);color:var(--on-deep-2);padding:64px 0 34px;font-size:14.5px}
 footer.site .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:38px;border-bottom:1px solid var(--on-deep-line)}
-footer.site h4{font-family:var(--f-display);font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:16px;font-weight:700}
+footer.site h3{font-family:var(--f-display);font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:16px;font-weight:700}
 footer.site a{color:var(--on-deep-2);text-decoration:none;display:block;padding:5px 0}
 footer.site a:hover{color:var(--eau)}
 footer.site .legal{padding-top:26px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;font-size:13px;color:var(--on-deep-2)}
@@ -232,7 +232,7 @@ section{scroll-margin-top:86px}
 .login-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;display:flex;flex-direction:column;gap:16px;box-shadow:var(--shadow)}
 .login-card h3{font-size:21px}
 .login-card .field{gap:6px}
-.login-card small{font-size:13px;color:var(--ink-3)}
+.login-card small{font-size:13px;color:var(--ink-2)}
 .login-head{display:flex;align-items:center;gap:11px}
 .login-head svg{width:22px;height:22px;color:var(--eau-strong);flex:none}
 .med-uses{display:grid;grid-template-columns:1fr 1fr;gap:20px}
